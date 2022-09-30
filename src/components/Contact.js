@@ -43,11 +43,11 @@ const Contact = () => {
             <section className="row" style={{ marginTop: "12%" }}>
                 <div className="col col-5 column">
                     <p>Contact me</p>
-                    <form action="#" method="#" className="column col-10">
-                        <input type="text" className="form-control mb-2 bg-dark name" name="name" placeholder="Enter your name" />
-                        <input type="email" className="form-control mb-2 bg-dark email" name="email" placeholder="Enter your email" />
-                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message"></textarea>
-                        <button name="submit">Send</button>
+                    <form action="https://formsubmit.co/kevinkarish983@gmail.com" method="post" className="column col-10">
+                        <input type="text" className="form-control mb-2 bg-dark name" name="name" placeholder="Enter your name" required />
+                        <input type="email" className="form-control mb-2 bg-dark email" name="email" placeholder="Enter your email" required />
+                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
+                        <button type='submit' name="submit">Send</button>
                     </form>
                 </div>
                 <div className="col-6 row px-5 social">
