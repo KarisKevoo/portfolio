@@ -7,7 +7,7 @@ import $ from 'jquery';
 $(window).ready(function(){
     setInterval(function () {
         $('.links a').each(function(){
-            if('http://'+document.location.hostname + ':'+ document.location.port + '/'+$(this).attr('href') == document.location.href){
+            if('https://'+document.location.hostname + '/portfolio/'+$(this).attr('href') == document.location.href){
                 $(this).css('color', 'rgb(172, 47, 70)');
             }
             else{

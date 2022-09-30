@@ -162,13 +162,12 @@ form button:hover{
     min-height: 150vh!important;
   }
   .content > section{
-    margin-top: 3%!important;
+    margin-top: 7%!important;
     left: 2%;
     display: flex!important;
     flex-direction: column!important;
     justify-content: center!important;
     align-items: center!important;
-    margin-top: 20%!important;
     max-width: 100%!important;
   }
   .content > section p, .content > section span{
