@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+* {
+background-color: #282c34;
+}
+body{
+  height: 100%;
+  overflow-x: hidden;
+}
+header{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  /*top: 0;*/
+  bottom: 0;
+  width: 6vmin;
+  height: 100%;
+  z-index: 5;
+}
+header a{
+  text-decoration: none;
+  color: rgb(167, 248, 255);
+  font-size: 2.5vmin;
+}
+header a:hover{
+  color: rgb(172, 47, 70);
+}
+.content{
+  min-height: 100vh!important;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: baseline!important;
+  position: relative!important;
+}
+.content > section{
+  width: 100%;
+  position: absolute;
+  left: 10%;
+}
+.content section p{
+  color: rgb(167, 248, 255);
+  font-stretch: expanded;
+  font-size: 6vmin;
+  font-family: 'Russo One', sans-serif;
+  text-shadow: -3px 1px 0px rgb(172, 47, 70);
+}
+.content section span{
+  font-size: 2.5vmin;
+  color: #9a9a9a;
+  font-family: monospace;
+}
+.content section .btn{
+  color: rgb(167, 248, 255);
+  border: 1.5px solid rgb(167, 248, 255);
+  outline: none;
+  border-radius: 0!important;
+}
+.content section .btn:hover{
+  color: rgb(172, 47, 70)!important;
+  border: 1.5px solid rgb(172, 47, 70)!important;
+}
+#imageDiv{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282c34;
+}
+#imageDiv a{
+  color: rgb(167, 248, 255);
+  font-size: 2.5vmin;
+  text-decoration: none;
+}
+#imageDiv button{
+  background: white;
+  color: black;
+  outline: none;
+  margin-top: 1vmin;
+}
+#imageDiv img{
+  margin-top: 3vmin;
+  margin-bottom: 2vmin;
+  width: 80%;
+  height: auto;
+}
+form input, form textarea{
+  outline: none!important;
+  border: 2px solid rgb(167, 248, 255)!important;
+  border-radius: 10px!important;
+  color: #c1c1c1!important;
+}
+form button{
+  border: 2px solid rgb(167, 248, 255)!important;
+  color: rgb(167, 248, 255)!important;
+  float: right;
+  border-radius: 5px;
+  width: 15vh;
+  padding: 3px;
+}
+form button:hover{
+  color: rgb(172, 47, 70)!important;
+  border: 2px solid rgb(172, 47, 70)!important;
+}
+.col-7 img{
+  border-radius: 7px;
+}
+#skills .col-7 > .pic{
+  width: 90%;
+  height: auto;
+}
+#skills .pic > div{
+  margin: 7px;
+  width: 20%;
+  height: 30%;
+  justify-content: space-evenly;
+}
+#skills .pic > div span{
+  background: transparent;
+  margin-inline: 5px;
+  font-size: 5vmin;
+}
+#home h1{
+  font-size: 50vmin;
+  font-weight: 12em;
+  color: rgb(167, 248, 255);
+  font-family: 'Courgette', cursive;
+  text-shadow: 1px 1px 1px rgb(172, 47, 70),
+              1px 2px 1px rgb(172, 47, 70),
+              1px 3px 1px rgb(172, 47, 70),
+              1px 4px 1px rgb(172, 47, 70),
+              1px 5px 1px rgb(172, 47, 70),
+              1px 6px 1px rgb(172, 47, 70),
+              1px 7px 1px rgb(172, 47, 70),
+              1px 8px 1px rgb(172, 47, 70),
+              1px 9px 1px rgb(172, 47, 70),
+              1px 10px 1px rgb(172, 47, 70),
+              1px 11px 1px rgb(172, 47, 70),
+              1px 25px 10px black;
+  user-select: none;
+  transform-origin: top left;
+}
+@media only screen and (max-width: 700px){
+  header{
+    width: 100%;
+    height: 17vmin;
+    bottom: 0!important;
+    /*top: 92%!important;*/
+    flex-direction:row;
+    justify-content: space-evenly;
+  }
+  header a{
+    font-size: 6vmin!important;
+  }
+  .content{
+    min-height: 150vh!important;
+  }
+  .content > section{
+    margin-top: 7%!important;
+    left: 2%;
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
+    align-items: center!important;
+    margin-top: 20%!important;
+    max-width: 100%!important;
+  }
+  .content > section p, .content > section span{
+    width: 90%!important;
+  }
+  .content > section span{
+    font-size: 4vmin;
+  }
+  .col-5{
+    width: 95%!important;
+    padding-right: 0!important;
+  }
+  .col-7{
+    width: 100%!important;
+  }
+  .col-7 img{
+    margin-top: 10vmin;
+    max-width: 100%!important;
+    border-radius: 7px!important;
+  }
+  #mywork .col-12 #imageHolder{
+    width: 100%!important;
+    margin-bottom: 5vmin;
+  }
+  #mywork .col-12{
+    display: flex;
+    align-items: center;
+    padding-right: 10%!important;
+  }
+  #imageDiv a{
+    font-size: 5vmin;
+    margin-bottom: 5vmin;
+  }
+  #imageDiv img{
+    margin-top: 45%;
+    margin-bottom: 5vmin;
+    width: 90%;
+  }
+  #imageDiv button{
+    width: fit-content;
+    font-size: 5vmin;
+  }
+  #contact .col-6{
+    width: 100%!important;
+    padding: 0!important;
+  }
+  #contact form{
+    width: 100%!important;
+  }
+  #contact a{
+    width: 9vh!important;
+    height: 9vh!important;
+    margin-top: 6vmin!important;
+  }
+  #skills .col-7{
+    justify-content: center;
+    padding: 0!important;
+    margin: 0!important;
+  }
+  #skills .col-7 > .pic{
+    width: 100%!important;
+  }
+  #skills .pic > div{
+    width: 25%;
+  }
+  #skills .pic > div span{
+  margin-inline: 3px;
+  }
+}
