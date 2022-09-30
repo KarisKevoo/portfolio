@@ -1,17 +1,19 @@
 import $ from 'jquery';
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 import { FaTwitter, FaFacebookF, FaWhatsapp, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 //checking whether input are empty or not
 $(window).ready(function () {
     $('button').on('click', function (e) {
         e.preventDefault();
-        if ($('.name').val() == '') {
+        if ($('.name').val() === 0) {
             $('.name').css('border', 'border: 2px solid red');
         }
-        else if ($('.email').val() == '') {
+        else if ($('.email').val() === 0) {
             $('.email').css('border', 'border: 2px solid red');
         }
-        else if ($('textarea').val() == '') {
+        else if ($('textarea').val() === 0) {
             $('textarea').css('border', 'border: 2px solid red');
         }
         else {
@@ -38,14 +40,30 @@ const Contact = () => {
         fontSize: "4vmin",
         transition: ".4s"
     }
+
+    //form handler
+        const form = useRef();
+      
+        const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', form.current, 'R4IdCsR1kcUa4ae0R')
+            .then((result) => {
+                console.log(result.text);
+                alert("Sucessfully sent!!");
+            }, (error) => {
+                console.log(error.text);
+            });
+        };
+
     return (
         <div className="content" id="contact">
             <section className="row" style={{ marginTop: "12%" }}>
                 <div className="col col-5 column">
                     <p>Contact me</p>
-                    <form action="https://formsubmit.co/kevinkarish983@gmail.com" method="post" className="column col-10">
-                        <input type="text" className="form-control mb-2 bg-dark name" name="name" placeholder="Enter your name" required />
-                        <input type="email" className="form-control mb-2 bg-dark email" name="email" placeholder="Enter your email" required />
+                    <form ref={form} onSubmit={sendEmail} className="column col-10">
+                        <input type="text" className="form-control mb-2 bg-dark name" name="user_name" placeholder="Enter your name" required/>
+                        <input type="email" className="form-control mb-2 bg-dark email" name="user_email" placeholder="Enter your email" required/>
                         <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
                         <button type='submit' name="submit">Send</button>
                     </form>

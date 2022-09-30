@@ -26,7 +26,7 @@ const Skills = () => {
                     <div className="col-5 column">
                         <p>Skills</p>
                         <span style={{color: "#c1c1c1"}}>The main area of expertise is full-stack web development (both client and server side).<br></br>
-                        I build fully responsive small and medium web applications using HTML5, CSS3/SCSS, JavaScript/Jquery/Ajax, React Js, PHP and MYSQL. I build user friendly user interfaces in terms of simplicity, beautifulness and interactive interfaces.<br></br><br></br>
+                        I build fully responsive small and medium web applications using HTML5, CSS3/SCSS, JavaScript/Jquery/Ajax, React Js, PHP and MYSQL. I build user friendly user interfaces in terms of simplicity, beauty and interactive interfaces.<br></br><br></br>
                         Visit my <a href='https://www.linkedin.com/in/kevin-kariuki-1b8a58213/' target="_blank" style={linkstyle}>LinkedIn</a> profile for more details or <a href="#contact" style={linkstyle}>contact</a> me.
                         </span><br></br>
                     </div>
