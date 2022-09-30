@@ -10,7 +10,7 @@ const Aboutme = () => {
                         </span><br></br>
                     </div>
                     <div className="col-7 column px-5">
-                    <img src="/profilepic.jpg" alt="my image" style={{border: "3px ridge rgb(167, 248, 255)"}}></img>
+                    <img src="./profilepic.jpg" alt="my image" style={{border: "3px ridge rgb(167, 248, 255)"}}></img>
                     </div>
                 </section>
         </div>

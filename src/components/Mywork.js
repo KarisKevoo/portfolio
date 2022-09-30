@@ -33,8 +33,8 @@ const Mywork = () => {
                 <section className="row" style={{marginTop: "8%"}}>
                     <div className="col-12 row" style={{paddingRight: "20vmin"}}>
                         <p>My work</p>
-                        <div style={mystyle} id="imageHolder"><img src="/Screenshot (75).png" alt="" style={imgstyle}></img><a href='https://www.agrotekplus.com' target="_blank" style={linkstyle}>Mylink</a></div>
-                        <div style={mystyle} id="imageHolder"><img src="/Screenshot (397).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div>
+                        <div style={mystyle} id="imageHolder"><img src="./Screenshot (75).png" alt="" style={imgstyle}></img><a href='https://www.agrotekplus.com' target="_blank" style={linkstyle}>Mylink</a></div>
+                        <div style={mystyle} id="imageHolder"><img src="./Screenshot (397).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div>
                     </div>
                 </section>
         </div>
