@@ -1,25 +1,10 @@
 import $ from 'jquery';
-import emailjs from '@emailjs/browser';
-import React, { useRef } from 'react';
 import { FaTwitter, FaFacebookF, FaWhatsapp, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import emailjs from "@emailjs/browser";
+import {TiTick} from 'react-icons/ti';
 
 //checking whether input are empty or not
 $(window).ready(function () {
-    $('button').on('click', function (e) {
-        e.preventDefault();
-        if ($('.name').val() === 0) {
-            $('.name').css('border', 'border: 2px solid red');
-        }
-        else if ($('.email').val() === 0) {
-            $('.email').css('border', 'border: 2px solid red');
-        }
-        else if ($('textarea').val() === 0) {
-            $('textarea').css('border', 'border: 2px solid red');
-        }
-        else {
-            $('form').submit();
-        }
-    });
     //hovering social links
     $('.social a').hover(function () {
         $(this).css('width', '19vh').css('height', '19vh');
@@ -40,17 +25,24 @@ const Contact = () => {
         fontSize: "4vmin",
         transition: ".4s"
     }
+    const tickStyle ={
+        background: 'transparent',
+        fontSize: '40px', 
+        paddingRight: '3px' 
+    }
 
     //form handler
-        const form = useRef();
-      
         const sendEmail = (e) => {
           e.preventDefault();
       
-          emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', form.current, 'R4IdCsR1kcUa4ae0R')
+          emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', e.target, 'R4IdCsR1kcUa4ae0R')
             .then((result) => {
                 console.log(result.text);
-                alert("Sucessfully sent!!");
+                $('span').show();
+                setTimeout(function(){
+                    $('span').fadeOut(1000);
+                    $('input, textarea').val() = '';
+                }, 8000);
             }, (error) => {
                 console.log(error.text);
             });
@@ -61,11 +53,12 @@ const Contact = () => {
             <section className="row" style={{ marginTop: "12%" }}>
                 <div className="col col-5 column">
                     <p>Contact me</p>
-                    <form ref={form} onSubmit={sendEmail} className="column col-10">
-                        <input type="text" className="form-control mb-2 bg-dark name" name="user_name" placeholder="Enter your name" required/>
-                        <input type="email" className="form-control mb-2 bg-dark email" name="user_email" placeholder="Enter your email" required/>
-                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
-                        <button type='submit' name="submit">Send</button>
+                    <span className='bg-light' id='messageSent'><TiTick style={tickStyle}/>Message sent successfully! You will be contacted through the email you've sent.</span>
+                    <form className="column col-10 form-group" onSubmit={sendEmail}>
+                        <input type="text" className="form-control mb-2 bg-dark name" name="user_name" placeholder="Enter your name"/>
+                        <input type="email" className="form-control mb-2 bg-dark email" name="user_email" placeholder="Enter your email"/>
+                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message"></textarea>
+                        <button type="submit" className='form-control w-25 bg-dark' name="submit">Send</button>
                     </form>
                 </div>
                 <div className="col-6 row px-5 social">
