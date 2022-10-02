@@ -35,7 +35,6 @@ const Contact = () => {
         const sendEmail = (e) => {
           e.preventDefault();
           $('input, textarea').val('');
-      
           emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', e.target, 'R4IdCsR1kcUa4ae0R')
             .then((result) => {
                 console.log(result.text);
@@ -55,9 +54,9 @@ const Contact = () => {
                     <p>Contact me</p>
                     <span className='bg-light' id='messageSent'><TiTick style={tickStyle}/>Message sent successfully! You will be contacted through the email you've sent.</span>
                     <form className="column col-10 form-group" onSubmit={sendEmail}>
-                        <input type="text" className="form-control mb-2 bg-dark name" name="user_name" placeholder="Enter your name"/>
-                        <input type="email" className="form-control mb-2 bg-dark email" name="user_email" placeholder="Enter your email"/>
-                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message"></textarea>
+                        <input type="text" className="form-control mb-2 bg-dark" id="name" name="user_name" placeholder="Enter your name" required/>
+                        <input type="email" className="form-control mb-2 bg-dark" name="user_email" placeholder="Enter your email" required/>
+                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
                         <button type="submit" className='form-control w-25 bg-dark' name="submit">Send</button>
                     </form>
                 </div>
