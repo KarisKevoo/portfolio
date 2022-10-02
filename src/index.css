@@ -3,8 +3,8 @@
 * {
 background-color: #282c34;
 }
-html::-webkit-scrollbar-thumb, html::-webkit-scrollbar-track{
-  width: 0;
+::-webkit-scrollbar{
+  width: 0!important;
 }
 body{
   height: 100%;

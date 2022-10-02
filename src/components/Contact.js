@@ -34,6 +34,7 @@ const Contact = () => {
     //form handler
         const sendEmail = (e) => {
           e.preventDefault();
+          $('input, textarea').val('');
       
           emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', e.target, 'R4IdCsR1kcUa4ae0R')
             .then((result) => {
@@ -41,7 +42,6 @@ const Contact = () => {
                 $('span').show();
                 setTimeout(function(){
                     $('span').fadeOut(1000);
-                    $('input, textarea').val() = '';
                 }, 8000);
             }, (error) => {
                 console.log(error.text);
