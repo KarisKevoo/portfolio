@@ -7,7 +7,7 @@ const Aboutme = () => {
                         <span style={{color: "#c1c1c1"}}>Well experienced in the industry of web development.<br></br>
                         Well-organised person, problem solver, curious to learn with high intention to detail. A fan of exploring nature, automotives and electronics lover.<br></br>
                         A family person, having both lovely parents and several siblings though still single. However, a remote job would be much more preferred.
-                        </span><br></br><br></br>
+                        </span> <br></br>
                         <a href="https://drive.google.com/file/d/1KmZJ2hozyvGum165QmOcY0ZCfWh04PHI/view?usp=sharing" target="_blank" className="btn mt-4 px-2 py-1">My resume</a>
                     </div>
                     <div className="col-7 column px-5">
