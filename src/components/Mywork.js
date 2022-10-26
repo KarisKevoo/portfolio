@@ -35,8 +35,7 @@ const Mywork = () => {
                     <p>My work</p>
                     <div style={mystyle} id="imageHolder"><img src="./Screenshot (75).png" alt="" style={imgstyle}></img><a href='https://www.agrotekplus.com' target="_blank" style={linkstyle}>Mylink</a></div>
                     <div style={mystyle} id="imageHolder"><img src="./Screenshot (397).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div>
-                    <div style={mystyle} id="imageHolder"><img src="./Screenshot (397).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div>
-                    {/* <div style={mystyle} id="imageHolder"><img src="./Screenshot (93).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div> */}
+                    <div style={mystyle} id="imageHolder"><img src="./Screenshot (93).png" alt="" style={imgstyle}></img><a href='#' target="_blank" style={linkstyle}>Mylink</a></div>
                 </div>
             </section>
         </div>
