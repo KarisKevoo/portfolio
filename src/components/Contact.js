@@ -34,8 +34,12 @@ const Contact = () => {
     //form handler
         const sendEmail = (e) => {
           e.preventDefault();
-          $('input, textarea').val('');
-          emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', e.target, 'R4IdCsR1kcUa4ae0R')
+          var params = {
+            user_name: document.getElementById('user_name').value,
+            user_email: document.getElementById('user_email').value,
+            message: document.getElementById('message').value
+          }
+          emailjs.send('service_e9u9u1u', 'template_ca8wkxj', params)
             .then((result) => {
                 console.log(result.text);
                 $('span').show();
@@ -53,11 +57,11 @@ const Contact = () => {
                 <div className="col col-5 column">
                     <p>Contact me</p>
                     <span className='bg-light' id='messageSent'><TiTick style={tickStyle}/>Message sent successfully! You will be contacted through the email you've sent.</span>
-                    <form className="column col-10 form-group" onSubmit={sendEmail}>
-                        <input type="text" className="form-control mb-2 bg-dark" id="name" name="user_name" placeholder="Enter your name" required/>
-                        <input type="email" className="form-control mb-2 bg-dark" name="user_email" placeholder="Enter your email" required/>
-                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
-                        <button type="submit" className='form-control w-25 bg-dark' name="submit">Send</button>
+                    <form className="column col-10 form-group">
+                        <input type="text" className="form-control mb-2 bg-dark" id="user_name" name="user_name" placeholder="Enter your name" required/>
+                        <input type="email" className="form-control mb-2 bg-dark" id="user_email" name="user_email" placeholder="Enter your email" required/>
+                        <textarea className="form-control mb-2 bg-dark" rows="8" id="message" name="message" placeholder="Enter your message" required></textarea>
+                        <button type="submit" className='form-control w-25 bg-dark' name="submit" onClick={sendEmail}>Send</button>
                     </form>
                 </div>
                 <div className="col-6 row px-5 social">
