@@ -32,6 +32,10 @@ const Contact = () => {
     }
 
     //form handler
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('R4IdCsR1kcUa4ae0R');
+        })();
         const sendEmail = (e) => {
           e.preventDefault();
           var params = {
