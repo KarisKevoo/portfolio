@@ -33,7 +33,6 @@ const Contact = () => {
     }
 
     //form handler
-    const Contact = () => {
         const form = useRef();
 
         const sendEmail = (e) => {
@@ -49,7 +48,6 @@ const Contact = () => {
                 }, (error) => {
               console.log(error.text);
         });
-  };
 
     return (
         <div className="content" id="contact">
