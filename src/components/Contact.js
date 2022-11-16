@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { FaTwitter, FaFacebookF, FaWhatsapp, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import emailjs from "@emailjs/browser";
 import {TiTick} from 'react-icons/ti';
+import React, {useRef} from 'react';
 
 //checking whether input are empty or not
 $(window).ready(function () {
@@ -30,15 +31,12 @@ const Contact = () => {
         fontSize: '40px', 
         paddingRight: '3px' 
     }
-    
+
+    //form handler
         const sendEmail = (e) => {
           e.preventDefault();
-          var params = {
-            user_name: document.getElementById('user_name').value,
-            user_email: document.getElementById('user_email').value,
-            message: document.getElementById('message').value
-          }
-          emailjs.send('service_e9u9u1u', 'template_ca8wkxj', params)
+          const form = useRef();
+          emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', form.current, 'R4IdCsR1kcUa4ae0R')
             .then((result) => {
                 console.log(result.text);
                 $('span').show();
@@ -56,11 +54,11 @@ const Contact = () => {
                 <div className="col col-5 column">
                     <p>Contact me</p>
                     <span className='bg-light' id='messageSent'><TiTick style={tickStyle}/>Message sent successfully! You will be contacted through the email you've sent.</span>
-                    <form className="column col-10 form-group">
-                        <input type="text" className="form-control mb-2 bg-dark" id="user_name" name="user_name" placeholder="Enter your name" required/>
-                        <input type="email" className="form-control mb-2 bg-dark" id="user_email" name="user_email" placeholder="Enter your email" required/>
-                        <textarea className="form-control mb-2 bg-dark" rows="8" id="message" name="message" placeholder="Enter your message" required></textarea>
-                        <button type="submit" className='form-control w-25 bg-dark' name="submit" onClick={sendEmail}>Send</button>
+                    <form className="column col-10 form-group" ref={form} onSubmit={sendEmail}>
+                        <input type="text" className="form-control mb-2 bg-dark" name="user_name" placeholder="Enter your name" required/>
+                        <input type="email" className="form-control mb-2 bg-dark" name="user_email" placeholder="Enter your email" required/>
+                        <textarea className="form-control mb-2 bg-dark" rows="8" name="message" placeholder="Enter your message" required></textarea>
+                        <button type="submit" className='form-control w-25 bg-dark' name="submit">Send</button>
                     </form>
                 </div>
                 <div className="col-6 row px-5 social">
