@@ -47,7 +47,8 @@ const Contact = () => {
                 }, 8000);
                 }, (error) => {
               console.log(error.text);
-        });
+            });
+        }
 
     return (
         <div className="content" id="contact">
