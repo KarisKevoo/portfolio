@@ -33,7 +33,7 @@ const Contact = () => {
     }
 
     //form handler
-        export const Contact = () => {
+    const Contact = () => {
         const form = useRef();
 
         const sendEmail = (e) => {
@@ -41,14 +41,14 @@ const Contact = () => {
 
             emailjs.sendForm('service_e9u9u1u', 'template_ca8wkxj', form.current, 'R4IdCsR1kcUa4ae0R')
             .then((result) => {
-            console.log(result.text);
-            $('span').show();
-            setTimeout(function(){
-                $('span').fadeOut(1000);
-            }, 8000);
-        }, (error) => {
-          console.log(error.text);
-      });
+                console.log(result.text);
+                $('span').show();
+                setTimeout(function(){
+                    $('span').fadeOut(1000);
+                }, 8000);
+                }, (error) => {
+              console.log(error.text);
+        });
   };
 
     return (
