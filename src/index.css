@@ -226,7 +226,7 @@ form button:hover{
   #imageDiv img{
     margin-top: 45%;
     margin-bottom: 5vmin;
-    width: 90%;
+    width: 80%;
   }
   #imageDiv button{
     width: fit-content;
