@@ -7,7 +7,7 @@ $(window).ready(function () {
         var imgsrc = $(this).attr('src');
         var link = $(this).next().attr('href');
         //var icon = <BiLinkExternal/>;
-        var div = "<div id='imageDiv'><img src='" + imgsrc + "' alt='image'/><a href='" + link + "' target='_blank' className='bg-light mt-3'>This is the link to the project <i class='fa fa-external-link' aria-hidden='true'></i></a><button>Close</button></div>";
+        var div = "<div id='imageDiv'><img src='" + imgsrc + "' alt='image'/><div className='row'><a href='" + link + "' target='_blank' className='bg-light mt-3'>This is the link to the project <i class='fa fa-external-link' aria-hidden='true'></i></a><button className='mx-3'>Close</button></div></div>";
         $('html').append(div);
 
         $('button').on('click', function () {
