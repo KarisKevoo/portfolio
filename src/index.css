@@ -193,7 +193,15 @@ form button:hover {
   transform: translateX(-50%);
 }
 
+.profilename {
+  max-width: 70%;
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 900px) {
+  .profilename {
+    max-width: 100%;
+  }
 
   #messageSent {
     width: 80%;
@@ -271,7 +279,7 @@ form button:hover {
   #imageDiv img {
     margin-top: 45%;
     margin-bottom: 5vmin;
-    width: 80%;
+    width: 97%;
   }
 
   #imageDiv button {
