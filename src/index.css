@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 * {
-background-color: #282c34;
+  background-color: #282c34;
 }
-::-webkit-scrollbar{
-  width: 0!important;
+
+::-webkit-scrollbar {
+  width: 0 !important;
 }
-body{
+
+#root {
+  overflow: hidden;
+}
+
+body {
   height: 100%;
   overflow-x: hidden;
 }
-header{
+
+header {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -23,49 +31,58 @@ header{
   height: 100%;
   z-index: 5;
 }
-header a{
+
+header a {
   text-decoration: none;
   color: rgb(167, 248, 255);
   font-size: 2.5vmin;
 }
-header a:hover{
+
+header a:hover {
   color: rgb(172, 47, 70);
 }
-.content{
-  min-height: 100vh!important;
-  width: 100%;
+
+.content {
+  min-height: 100vh !important;
+  max-width: 100% !important;
   box-sizing: border-box;
-  align-items: baseline!important;
-  position: relative!important;
+  align-items: baseline !important;
+  position: relative !important;
 }
-.content > section{
+
+.content>section {
   width: 100%;
   position: absolute;
   left: 10%;
 }
-.content section p{
+
+.content section p {
   color: rgb(167, 248, 255);
   font-stretch: expanded;
   font-size: 6vmin;
   font-family: 'Russo One', sans-serif;
   text-shadow: -3px 1px 0px rgb(172, 47, 70);
 }
-.content section span{
+
+.content section span {
   font-size: 2.5vmin;
   color: #9a9a9a;
   font-family: monospace;
 }
-.content section .btn{
+
+.content section .btn {
   color: rgb(167, 248, 255);
   border: 1.5px solid rgb(167, 248, 255);
   outline: none;
-  border-radius: 0!important;
+  border-radius: 0 !important;
 }
-.content section .btn:hover{
-  color: rgb(172, 47, 70)!important;
-  border: 1.5px solid rgb(172, 47, 70)!important;
+
+.content section .btn:hover {
+  color: rgb(172, 47, 70) !important;
+  border: 1.5px solid rgb(172, 47, 70) !important;
 }
-#imageDiv{
+
+#imageDiv {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -76,80 +93,93 @@ header a:hover{
   align-items: center;
   background-color: #282c34;
 }
-#imageDiv a{
+
+#imageDiv a {
   color: rgb(167, 248, 255);
   font-size: 2.5vmin;
   text-decoration: none;
 }
-#imageDiv button{
+
+#imageDiv button {
   background: white;
   color: black;
   outline: none;
   margin-top: 1vmin;
 }
-#imageDiv img{
+
+#imageDiv img {
   margin-top: 3vmin;
   margin-bottom: 2vmin;
   width: 80%;
   height: auto;
 }
-form input, form textarea{
-  outline: none!important;
-  border: 2px solid rgb(167, 248, 255)!important;
-  border-radius: 10px!important;
-  color: #c1c1c1!important;
+
+form input,
+form textarea {
+  outline: none !important;
+  border: 2px solid rgb(167, 248, 255) !important;
+  border-radius: 10px !important;
+  color: #c1c1c1 !important;
 }
-form button{
-  border: 2px solid rgb(167, 248, 255)!important;
-  color: rgb(167, 248, 255)!important;
+
+form button {
+  border: 2px solid rgb(167, 248, 255) !important;
+  color: rgb(167, 248, 255) !important;
   float: right;
   border-radius: 5px;
   width: 15vh;
   padding: 3px;
 }
-form button:hover{
-  color: rgb(172, 47, 70)!important;
-  border: 2px solid rgb(172, 47, 70)!important;
+
+form button:hover {
+  color: rgb(172, 47, 70) !important;
+  border: 2px solid rgb(172, 47, 70) !important;
 }
-.col-7 img{
+
+.col-7 img {
   border-radius: 7px;
 }
-#skills .col-7 > .pic{
+
+#skills .col-7>.pic {
   width: 90%;
   height: auto;
 }
-#skills .pic > div{
+
+#skills .pic>div {
   margin: 7px;
   width: 20%;
   height: 30%;
   justify-content: space-evenly;
 }
-#skills .pic > div span{
+
+#skills .pic>div span {
   background: transparent;
   margin-inline: 5px;
   font-size: 5vmin;
 }
-#home h1{
-  font-size: 50vmin;
+
+#home h1 {
+  font-size: 20em;
   font-weight: 12em;
   color: rgb(167, 248, 255);
   font-family: 'Courgette', cursive;
   text-shadow: 1px 1px 1px rgb(172, 47, 70),
-              1px 2px 1px rgb(172, 47, 70),
-              1px 3px 1px rgb(172, 47, 70),
-              1px 4px 1px rgb(172, 47, 70),
-              1px 5px 1px rgb(172, 47, 70),
-              1px 6px 1px rgb(172, 47, 70),
-              1px 7px 1px rgb(172, 47, 70),
-              1px 8px 1px rgb(172, 47, 70),
-              1px 9px 1px rgb(172, 47, 70),
-              1px 10px 1px rgb(172, 47, 70),
-              1px 11px 1px rgb(172, 47, 70),
-              1px 25px 10px black;
+    1px 2px 1px rgb(172, 47, 70),
+    1px 3px 1px rgb(172, 47, 70),
+    1px 4px 1px rgb(172, 47, 70),
+    1px 5px 1px rgb(172, 47, 70),
+    1px 6px 1px rgb(172, 47, 70),
+    1px 7px 1px rgb(172, 47, 70),
+    1px 8px 1px rgb(172, 47, 70),
+    1px 9px 1px rgb(172, 47, 70),
+    1px 10px 1px rgb(172, 47, 70),
+    1px 11px 1px rgb(172, 47, 70),
+    1px 25px 10px black;
   user-select: none;
   transform-origin: top left;
 }
-#messageSent{
+
+#messageSent {
   position: fixed;
   top: 8%;
   border-radius: 5px;
@@ -162,102 +192,158 @@ form button:hover{
   left: 50%;
   transform: translateX(-50%);
 }
-@media only screen and (max-width: 700px){
-  
-  #messageSent{
+
+@media only screen and (max-width: 900px) {
+
+  #messageSent {
     width: 80%;
     top: 3%;
     font-size: 4vmin;
   }
-  header{
+
+  header {
     width: 100%;
     height: 17vmin;
-    bottom: 0!important;
+    bottom: 0 !important;
     /*top: 92%!important;*/
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-evenly;
   }
-  header a{
-    font-size: 6vmin!important;
+
+  header a {
+    font-size: 6vmin !important;
   }
-  .content{
-    min-height: 150vh!important;
+
+  .content {
+    min-height: 150vh !important;
   }
-  .content > section{
-    margin-top: 7%!important;
+
+  .content>section {
+    margin-top: 7% !important;
     left: 2%;
-    display: flex!important;
-    flex-direction: column!important;
-    justify-content: center!important;
-    align-items: center!important;
-    max-width: 100%!important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
   }
-  .content > section p, .content > section span{
-    width: 90%!important;
+
+  .content>section p,
+  .content>section span {
+    width: 90% !important;
   }
-  .content > section span{
+
+  .content>section span {
     font-size: 4vmin;
   }
-  .col-5{
-    width: 95%!important;
-    padding-right: 0!important;
+
+  .col-5 {
+    width: 95% !important;
+    padding-right: 0 !important;
   }
-  .col-7{
-    width: 100%!important;
+
+  .col-7 {
+    width: 100% !important;
   }
-  .col-7 img{
+
+  .col-7 img {
     margin-top: 10vmin;
-    max-width: 100%!important;
-    border-radius: 7px!important;
+    max-width: 100% !important;
+    border-radius: 7px !important;
   }
-  #mywork .col-12 #imageHolder{
-    width: 100%!important;
+
+  #mywork .col-12 #imageHolder {
+    width: 100% !important;
     margin-bottom: 5vmin;
   }
-  #mywork .col-12{
+
+  #mywork .col-12 {
     display: flex;
     align-items: center;
-    padding-right: 10%!important;
+    padding-right: 10% !important;
   }
-  #imageDiv a{
+
+  #imageDiv a {
     font-size: 5vmin;
     margin-bottom: 5vmin;
   }
-  #imageDiv img{
+
+  #imageDiv img {
     margin-top: 45%;
     margin-bottom: 5vmin;
     width: 80%;
   }
-  #imageDiv button{
+
+  #imageDiv button {
     width: fit-content;
     font-size: 5vmin;
   }
-  #contact .col-6{
-    width: 100%!important;
-    padding: 0!important;
-    margin-left: 5px!important;
+
+  #contact .col-6 {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-left: 5px !important;
   }
-  #contact form{
-    width: 100%!important;
+
+  #contact form {
+    width: 100% !important;
   }
-  #contact a{
-    width: 9vh!important;
-    height: 9vh!important;
-    margin-top: 6vmin!important;
-    border-radius: 50%!important;
+
+  #contact a {
+    width: 70% !important;
+    height: 70% !important;
+    margin-top: 0 !important;
+    font-size: 8vw !important;
   }
-  #skills .col-7{
+
+  #skills .col-7 {
     justify-content: center;
-    padding: 0!important;
-    margin: 0!important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  #skills .col-7 > .pic{
-    width: 100%!important;
+
+  #skills .col-7>.pic {
+    width: 100% !important;
   }
-  #skills .pic > div{
+
+  #skills .pic>div {
     width: 25%;
   }
-  #skills .pic > div span{
-  margin-inline: 3px;
+
+  #skills .pic>div span {
+    margin-inline: 3px;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  #home h1 {
+    font-size: 12em;
+  }
+
+  #social-cover {
+    width: 12vh !important;
+    height: 12vh !important;
+    margin-top: 6vmin !important;
+  }
+
+  #contact a {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0 !important;
+    font-size: 6vw !important;
+  }
+}
+
+#nameEmpty,
+#emailEmpty,
+#messageEmpty {
+  display: none;
+  color: red;
+  font-size: 12px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.formerror {
+  border: 2px solid red !important;
 }
