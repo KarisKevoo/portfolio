@@ -23,7 +23,7 @@ const Aboutme = () => {
         </div>
         <div className="col-7 column px-5">
           <img
-            src={process.env.PUBLIC_URL + "/profilepic2.jpg"}
+            src={process.env.PUBLIC_URL + "/profilepic2.JPG"}
             alt="my image"
             className="profilename"
             style={{ borderRadius: "5px" }}

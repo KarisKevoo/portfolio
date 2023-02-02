@@ -1,5 +1,4 @@
 import $ from "jquery";
-import { TbExternalLink } from "react-icons/tb";
 
 //hovering the images
 $(window).ready(function () {
@@ -13,9 +12,7 @@ $(window).ready(function () {
       imgsrc +
       "' alt='image'/><div className='row'><a href='" +
       link +
-      "' target='_blank' className='bg-light mt-3'>This is the link to the project'" +
-      <TbExternalLink /> +
-      "'</a><button className='mx-3'>Close</button></div></div>";
+      "' target='_blank' className='bg-light mt-3'>This is the link to the project <i class='fas fa-external-link-square'></i></a><button className='mx-3'>Close</button></div></div>";
     $("html").append(div);
 
     $("button").on("click", function () {
