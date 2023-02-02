@@ -23,9 +23,9 @@ const Aboutme = () => {
         </div>
         <div className="col-7 column px-5">
           <img
-            src="./profilepic.jpg"
+            src="./profilepic2.jpg"
             alt="my image"
-            style={{ border: "3px ridge rgb(167, 248, 255)" }}
+            style={{ borderRadius: "5px" }}
           ></img>
         </div>
       </section>
