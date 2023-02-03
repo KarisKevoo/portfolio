@@ -55,7 +55,7 @@ const Mywork = () => {
           </div>
           <div style={mystyle} id="imageHolder">
             <img
-              src={process.env.PUBLIC_URL + "/Screenshot (397).png"}
+              src={process.env.PUBLIC_URL + "/Screenshot (210).png"}
               alt=""
               style={imgstyle}
             ></img>
